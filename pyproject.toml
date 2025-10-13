@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atlas-observability"
+version = "0.1.0"
+description = "Atlas: Agents for Observability & Self-Healing (first commit scaffold)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name="Your Name"}]
+license = {text = "MIT"}
+dependencies = [
+    "typer>=0.12",
+    "rich>=13.7",
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "pydantic>=2.0",
+    "scipy>=1.10",
+    "opentelemetry-api>=1.25; python_version >= '3.10'",
+    "opentelemetry-sdk>=1.25; python_version >= '3.10'",
+    # Optional but commonly installed
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "ruff>=0.4",
+    "mypy>=1.6",
+]
+
+[project.scripts]
+atlas = "atlas.cli:app"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
