@@ -1,4 +1,4 @@
-# Atlas — Agents for Observability & Self-Healing
+# ATLAS — Agents for Observability & Self-Healing
 
 ## Quickstart (Python 3.10+)
 
